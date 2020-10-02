@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.totvs.guildjava.construcaoobjetos.cliente.dominio.Cliente;
-import com.totvs.guildjava.construcaoobjetos.cliente.dominio.SituacaoCliente;
 import com.totvs.guildjava.construcaoobjetos.pedido.dominio.Pedido;
 
 class ClienteTest {

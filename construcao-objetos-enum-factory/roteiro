@@ -1,0 +1,30 @@
+Falar do objetivo da guild
+
+- Demorou um tempo para definir quais realmente seriam as atribuições da guild e por fim, a nossa atividade se resumirá a encontros provavelmente mensais, sobre tópicos bem específicos. Os integrantes da guild podem trazer assuntos "mais quentes" do dia-dia em busca de alguma "luz" mas a guild em si não terá um backlog para resolução de problemas, até porque já existem áreas como framework, engenharia e os próprios times de produto. Nosso papel como guild é divulgar conhecimento, se mais um canal de comunicação. Deixar perguntas sobre isso para o final.
+
+EXEMPLO 1
+
+EXEMPLO 2
+
+1.
+
+Projeto só com as entidades:
+
+Caracteristica - sem o método valor
+CaracteristicaValorTipo - somente com os valores dos enums
+CaracteristicaValor
+Estoque
+
+2. 
+
+Implementar CaracteristicaValorTipo (enumfactory)
+Implementar o método valor
+
+3. 
+
+Ir para o teste e mostrar a utilização.
+
+
+
+
+ 
