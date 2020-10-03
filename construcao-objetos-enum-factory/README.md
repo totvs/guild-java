@@ -3,7 +3,7 @@
 
 ## Contextualização
 
-O encapsulamento das regras de negócio referente ao nascimento de um novo objeto muitas vezes escapam de onde deveriam estar e acabam "vazando" a responsabilidade para camadas superiores/clientes.Este projeto tem o objetivo de demonstrar como manter a criação do obejtos no local correto através da utilização de enum factory.
+O encapsulamento das regras de negócio referente ao nascimento de um novo objeto muitas vezes escapam de onde deveriam estar e acabam "vazando" a responsabilidade para camadas superiores/clientes. Este projeto tem o objetivo de demonstrar como manter a criação do obejtos no local correto através da utilização de enum factory.
 
 ## Exemplo
 
