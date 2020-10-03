@@ -3,8 +3,7 @@
 
 ## Contextualização
 
-O encapsulamento das regras de negócio referente ao nascimento de um novo objeto muitas vezes escapam de onde deveriam estar e acabam vazando a responsabilidade para camadas superiores/clientes.
-
+O encapsulamento das regras de negócio referente ao nascimento de um novo objeto muitas vezes escapam de onde deveriam estar e acabam vazando a responsabilidade para camadas superiores/clientes. Este projeto tem o objetivo de demonstrar como manter a criação do obejtos no local correto através da utilização de factory method e static factory method.
 ## Exemplo
 
 Para ilustrar a situação, criamos um exemplo que consiste de duas entidades, Cliente e Pedido. Considere que quando um cliente fica 12 meses sem realizar compras sua situação é alterada de ativo para inativo. Apesar de inativo, o cliente pode realizar novas compras, porém, o pedido deve passar por um processo de aprovação. Quando o cliente está ativo, o pedido já nasce aprovado. Considere também que o caso de uso consiste em selecionar um cliente e entre outras opções existe a opção de criar pedido. 
