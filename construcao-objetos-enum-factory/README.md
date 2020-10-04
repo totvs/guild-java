@@ -95,3 +95,4 @@ estoques.sort(Comparator.comparing(estoque -> estoque.getCaracteristicaValor(alg
 // ...
 
 ```
+
