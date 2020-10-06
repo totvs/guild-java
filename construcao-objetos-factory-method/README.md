@@ -12,9 +12,6 @@ Para ilustrar a situação, criamos um exemplo que consiste de duas entidades, C
 
 ## Uma primeira implementação
 
-*[branch com implementação](https://github.com/murilocardoso-totvs/construcao-objetos/tree/implementacao01)*
-
-
 ```java
 public class ClienteService {
 
@@ -44,9 +41,7 @@ public class ClienteService {
     * A regra de criação do pedido a partir de um cliente escapou da camada de domínio e passou a fazer parte da camada de aplicação. Conforme comentado anteriormente, sempre que possível, decisões com base em regra de negócio devem ser encapsuladas na camada de domínio. 
     * Outro ponto importante é que, sempre que possível vale a pena esconder os detalhes de implementação de um determinado objeto, veja que, além de tomar a decisão de criar um pedido aprovado ou aguardando aprovação, quem cria o pedido deve conhecer os valores dos enums referente as situações.  
   
-## A implementação que soluciona os problemas seguindo a organização hexagonal do projeto
-
-*[branch com implementação](https://github.com/murilocardoso-totvs/construcao-objetos/tree/implementacao02)*
+## Implementação que soluciona os itens acima encapsulando a regra de negócio no objeto de domínio.
   
 ```java
 public class ClienteService {
