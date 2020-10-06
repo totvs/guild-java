@@ -12,9 +12,6 @@ Para ilustrar a situação, criamos um exemplo que consiste de duas entidades, C
 
 ## Uma primeira implementação
 
-*[branch com implementação](https://github.com/murilocardoso-totvs/construcao-objetos/tree/implementacao01)*
-
-
 ```java
 public class ClienteService {
 
@@ -45,8 +42,6 @@ public class ClienteService {
     * Outro ponto importante é que, sempre que possível vale a pena esconder os detalhes de implementação de um determinado objeto, veja que, além de tomar a decisão de criar um pedido aprovado ou aguardando aprovação, quem cria o pedido deve conhecer os valores dos enums referente as situações.  
   
 ## A implementação que soluciona os problemas seguindo a organização hexagonal do projeto
-
-*[branch com implementação](https://github.com/murilocardoso-totvs/construcao-objetos/tree/implementacao02)*
   
 ```java
 public class ClienteService {
