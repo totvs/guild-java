@@ -39,7 +39,7 @@ public class Estoque {
 	}
 
 	public List<CaracteristicaValor<?>> getCaracteristicasValor() {
-		return caracteristicasValor;
+		return Collections.unmodifiableList(caracteristicasValor);
 	}
 
 	public CaracteristicaValor<?> getCaracteristicaValor(String id) {
