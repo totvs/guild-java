@@ -20,7 +20,7 @@ public class Pedido {
 
 	private SituacaoPedido situacao;
 
-	Pedido() {}
+	protected Pedido() {}
 
 	public Pedido(String clienteId, SituacaoPedido situacao) {
 		this.id = UUID.randomUUID().toString();

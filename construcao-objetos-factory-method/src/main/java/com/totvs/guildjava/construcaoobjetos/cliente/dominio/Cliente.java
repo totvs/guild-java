@@ -16,7 +16,7 @@ public class Cliente {
 	private String nome;
 	private SituacaoCliente situacao;
 
-	Cliente() {}
+	protected Cliente() {}
 
 	public Cliente(String nome, SituacaoCliente situacao) {
 		this.id = UUID.randomUUID().toString();
