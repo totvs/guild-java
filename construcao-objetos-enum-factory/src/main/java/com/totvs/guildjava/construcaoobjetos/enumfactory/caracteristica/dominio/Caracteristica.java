@@ -10,7 +10,7 @@ public class Caracteristica {
 
 	private CaracteristicaValorTipo tipoValor;
 
-	public Caracteristica() {}
+	protected Caracteristica() {}
 
 	public Caracteristica(String id, String nome, CaracteristicaValorTipo formato) {
 		this.id = id;

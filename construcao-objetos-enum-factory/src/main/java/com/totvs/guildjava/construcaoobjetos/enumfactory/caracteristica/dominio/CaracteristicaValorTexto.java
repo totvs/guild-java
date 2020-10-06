@@ -7,6 +7,8 @@ public class CaracteristicaValorTexto implements CaracteristicaValor<String> {
 	private String id;
 	private String valor;
 
+	protected CaracteristicaValorTexto() {}
+
 	protected CaracteristicaValorTexto(String id, String valor) {
 		this.id = id;
 		this.valor = valor;

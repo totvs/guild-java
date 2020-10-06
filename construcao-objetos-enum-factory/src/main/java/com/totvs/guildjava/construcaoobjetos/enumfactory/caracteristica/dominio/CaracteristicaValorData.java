@@ -8,6 +8,8 @@ public class CaracteristicaValorData implements CaracteristicaValor<LocalDate> {
 	private String id;
 	private LocalDate valor;
 
+	protected CaracteristicaValorData {}
+
 	protected CaracteristicaValorData(String id, LocalDate valor) {
 		this.id = id;
 		this.valor = valor;

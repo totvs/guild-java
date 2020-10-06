@@ -8,6 +8,8 @@ public class CaracteristicaValorNumero implements CaracteristicaValor<BigDecimal
 	private String id;
 	private BigDecimal valor;
 
+	protected CaracteristicaValorNumero {}
+
 	protected CaracteristicaValorNumero(String id, BigDecimal valor) {
 		this.id = id;
 		this.valor = valor;

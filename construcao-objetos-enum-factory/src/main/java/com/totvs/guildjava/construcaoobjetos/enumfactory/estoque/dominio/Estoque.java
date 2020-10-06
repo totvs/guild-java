@@ -17,6 +17,8 @@ public class Estoque {
 
 	private BigDecimal saldo;
 
+	protected Estoque() {}
+
 	public Estoque(String id, String produtoId, List<CaracteristicaValor<?>> caracteristicasValor, BigDecimal saldo) {
 		this.id = id;
 		this.produtoId = produtoId;
