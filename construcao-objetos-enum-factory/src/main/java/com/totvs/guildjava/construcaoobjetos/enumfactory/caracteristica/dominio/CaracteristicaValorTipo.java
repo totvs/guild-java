@@ -8,8 +8,8 @@ public enum CaracteristicaValorTipo {
 	TEXTO {
 
 		@Override
-		public CaracteristicaValorTexto createInstance(String id, String valor) {
-			return new CaracteristicaValorTexto(id, valor);
+		public CaracteristicaValorTexto createInstance(String caracteristicaId, String valor) {
+			return new CaracteristicaValorTexto(caracteristicaId, valor);
 		}
 
 	},
@@ -17,8 +17,8 @@ public enum CaracteristicaValorTipo {
 	NUMERO {
 
 		@Override
-		public CaracteristicaValorNumero createInstance(String id, String valor) {
-			return new CaracteristicaValorNumero(id, new BigDecimal(valor));
+		public CaracteristicaValorNumero createInstance(String caracteristicaId, String valor) {
+			return new CaracteristicaValorNumero(caracteristicaId, new BigDecimal(valor));
 		}
 
 	},
@@ -26,12 +26,12 @@ public enum CaracteristicaValorTipo {
 	DATA {
 
 		@Override
-		public CaracteristicaValorData createInstance(String id, String valor) {
-			return new CaracteristicaValorData(id, LocalDate.parse(valor));
+		public CaracteristicaValorData createInstance(String caracteristicaId, String valor) {
+			return new CaracteristicaValorData(caracteristicaId, LocalDate.parse(valor));
 		}
 
 	};
 
-	public abstract CaracteristicaValor<?> createInstance(String id, String valor);
+	public abstract CaracteristicaValor<?> createInstance(String caracteristicaId, String valor);
 
 }

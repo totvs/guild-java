@@ -2,6 +2,7 @@ package com.totvs.guildjava.construcaoobjetos.enumfactory.estoque.dominio;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -42,8 +43,12 @@ public class Estoque {
 		return Collections.unmodifiableList(caracteristicasValor);
 	}
 
-	public CaracteristicaValor<?> getCaracteristicaValor(String id) {
-		return this.getCaracteristicasValor().stream().filter(cv -> cv.getId().equals(id)).findFirst().orElseThrow();
+	public CaracteristicaValor<?> getCaracteristicaValor(String caracteristicaId) {
+		return this.getCaracteristicasValor()
+		           .stream()
+		           .filter(cv -> cv.getCaracteristicaId().equals(caracteristicaId))
+		           .findFirst()
+		           .orElseThrow();
 	}
 
 	public static EstoqueBuilder builder() {
@@ -99,7 +104,7 @@ public class Estoque {
 
 	@Override
 	public String toString() {
-		return "Estoque [id=" + id + ", produtoId=" + produtoId + ", caracteristicas=" + caracteristicasValor
+		return "Estoque [id=" + id + ", produtoId=" + produtoId + ", caracteristicasValor=" + caracteristicasValor
 		        + ", saldo=" + saldo + "]";
 	}
 }

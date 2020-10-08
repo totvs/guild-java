@@ -4,19 +4,19 @@ import java.util.Objects;
 
 public class CaracteristicaValorTexto implements CaracteristicaValor<String> {
 
-	private String id;
+	private String caracteristicaId;
 	private String valor;
 
 	protected CaracteristicaValorTexto() {}
 
 	protected CaracteristicaValorTexto(String id, String valor) {
-		this.id = id;
+		this.caracteristicaId = id;
 		this.valor = valor;
 	}
 
 	@Override
-	public String getId() {
-		return id;
+	public String getCaracteristicaId() {
+		return caracteristicaId;
 	}
 
 	@Override
@@ -31,12 +31,12 @@ public class CaracteristicaValorTexto implements CaracteristicaValor<String> {
 
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(this.id);
+		return Objects.hashCode(this.caracteristicaId);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		return Objects.equals(this.id, obj);
+		return Objects.equals(this.caracteristicaId, obj);
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class CaracteristicaValorTexto implements CaracteristicaValor<String> {
 
 	@Override
 	public String toString() {
-		return "ValorTexto [id=" + id + ", valor=" + valor + "]";
+		return "ValorTexto [id=" + caracteristicaId + ", valor=" + valor + "]";
 	}
 
 }

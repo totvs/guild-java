@@ -5,19 +5,19 @@ import java.util.Objects;
 
 public class CaracteristicaValorNumero implements CaracteristicaValor<BigDecimal> {
 
-	private String id;
+	private String caracteristicaId;
 	private BigDecimal valor;
 
-	protected CaracteristicaValorNumero {}
+	protected CaracteristicaValorNumero() {}
 
 	protected CaracteristicaValorNumero(String id, BigDecimal valor) {
-		this.id = id;
+		this.caracteristicaId = id;
 		this.valor = valor;
 	}
 
 	@Override
-	public String getId() {
-		return id;
+	public String getCaracteristicaId() {
+		return caracteristicaId;
 	}
 
 	@Override
@@ -32,12 +32,12 @@ public class CaracteristicaValorNumero implements CaracteristicaValor<BigDecimal
 
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(this.id);
+		return Objects.hashCode(this.caracteristicaId);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		return Objects.equals(this.id, obj);
+		return Objects.equals(this.caracteristicaId, obj);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class CaracteristicaValorNumero implements CaracteristicaValor<BigDecimal
 
 	@Override
 	public String toString() {
-		return "ValorNumero [id=" + id + ", valor=" + valor + "]";
+		return "ValorNumero [id=" + caracteristicaId + ", valor=" + valor + "]";
 	}
 
 }

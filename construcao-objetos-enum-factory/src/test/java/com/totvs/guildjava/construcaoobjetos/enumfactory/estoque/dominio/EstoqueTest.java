@@ -4,13 +4,13 @@ import static com.totvs.guildjava.construcaoobjetos.enumfactory.caracteristica.d
 import static com.totvs.guildjava.construcaoobjetos.enumfactory.caracteristica.dominio.CaracteristicaValorTipo.NUMERO;
 import static com.totvs.guildjava.construcaoobjetos.enumfactory.caracteristica.dominio.CaracteristicaValorTipo.TEXTO;
 import static java.util.UUID.randomUUID;
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
@@ -45,18 +45,17 @@ class EstoqueTest {
 		/*
 		 * ----- primeira entrada no estoque com os valores para cada característica
 		 */
-		EntradaEstoqueDTO primeiraEntradaEstoqueDTO = new EntradaEstoqueDTO();
+		EntradaEstoqueDTO primeiraEntradaDTO = new EntradaEstoqueDTO();
 
-		primeiraEntradaEstoqueDTO.produtoId = randomUUID().toString();
+		primeiraEntradaDTO.produtoId = randomUUID().toString();
 
-		primeiraEntradaEstoqueDTO.caracteristicasValor.add(new CaracteristicaValorDTO(lote.getId(), "LOTE Z"));
-		primeiraEntradaEstoqueDTO.caracteristicasValor.add(new CaracteristicaValorDTO(dataValidade.getId(), "2021-12-31"));
-		primeiraEntradaEstoqueDTO.caracteristicasValor.add(new CaracteristicaValorDTO(indiceFragilidade.getId(),
-		                                                                              "1.3"));
+		primeiraEntradaDTO.caracteristicasValor.add(new CaracteristicaValorDTO(lote.getId(), "LOTE Z"));
+		primeiraEntradaDTO.caracteristicasValor.add(new CaracteristicaValorDTO(dataValidade.getId(), "2021-12-31"));
+		primeiraEntradaDTO.caracteristicasValor.add(new CaracteristicaValorDTO(indiceFragilidade.getId(), "1.3"));
 
-		primeiraEntradaEstoqueDTO.quantidade = BigDecimal.TEN;
+		primeiraEntradaDTO.quantidade = BigDecimal.TEN;
 
-		List<CaracteristicaValor<?>> cvPrimeiraEntrada = primeiraEntradaEstoqueDTO.caracteristicasValor.stream().map(cvDTO -> {
+		List<CaracteristicaValor<?>> cvPrimeiraEntrada = primeiraEntradaDTO.caracteristicasValor.stream().map(cvDTO -> {
 
 			Caracteristica caracteristica = caracteristicas.stream()
 			                                               .filter(c -> c.getId().equals(cvDTO.caracteristicaId))
@@ -65,12 +64,12 @@ class EstoqueTest {
 
 			return caracteristica.valor(cvDTO.valor);
 
-		}).collect(toList());
+		}).collect(Collectors.toList());
 
 		var estoque01 = Estoque.builder()
 		                       .id(randomUUID().toString())
-		                       .produtoId(primeiraEntradaEstoqueDTO.produtoId)
-		                       .quantidade(primeiraEntradaEstoqueDTO.quantidade)
+		                       .produtoId(primeiraEntradaDTO.produtoId)
+		                       .quantidade(primeiraEntradaDTO.quantidade)
 		                       .caracteristicas(cvPrimeiraEntrada)
 		                       .build();
 
@@ -80,17 +79,17 @@ class EstoqueTest {
 		 * ----- segunda entrada no estoque com os valores para cada característica
 		 */
 
-		EntradaEstoqueDTO segundaEntradaEstoqueDTO = new EntradaEstoqueDTO();
+		EntradaEstoqueDTO segundaEntradaDTO = new EntradaEstoqueDTO();
 
-		segundaEntradaEstoqueDTO.produtoId = randomUUID().toString();
+		segundaEntradaDTO.produtoId = randomUUID().toString();
 
-		segundaEntradaEstoqueDTO.caracteristicasValor.add(new CaracteristicaValorDTO(lote.getId(), "LOTE A"));
-		segundaEntradaEstoqueDTO.caracteristicasValor.add(new CaracteristicaValorDTO(dataValidade.getId(), "2020-12-31"));
-		segundaEntradaEstoqueDTO.caracteristicasValor.add(new CaracteristicaValorDTO(indiceFragilidade.getId(), "1.1"));
+		segundaEntradaDTO.caracteristicasValor.add(new CaracteristicaValorDTO(lote.getId(), "LOTE A"));
+		segundaEntradaDTO.caracteristicasValor.add(new CaracteristicaValorDTO(dataValidade.getId(), "2020-12-31"));
+		segundaEntradaDTO.caracteristicasValor.add(new CaracteristicaValorDTO(indiceFragilidade.getId(), "1.1"));
 
-		segundaEntradaEstoqueDTO.quantidade = BigDecimal.TEN;
+		segundaEntradaDTO.quantidade = BigDecimal.TEN;
 
-		List<CaracteristicaValor<?>> cvSegundaEntrada = segundaEntradaEstoqueDTO.caracteristicasValor.stream().map(cvDTO -> {
+		List<CaracteristicaValor<?>> cvSegundaEntrada = segundaEntradaDTO.caracteristicasValor.stream().map(cvDTO -> {
 
 			Caracteristica caracteristica = caracteristicas.stream()
 			                                               .filter(c -> c.getId().equals(cvDTO.caracteristicaId))
@@ -99,12 +98,12 @@ class EstoqueTest {
 
 			return caracteristica.valor(cvDTO.valor);
 
-		}).collect(toList());
+		}).collect(Collectors.toList());
 
 		var estoque02 = Estoque.builder()
 		                       .id(randomUUID().toString())
-		                       .produtoId(segundaEntradaEstoqueDTO.produtoId)
-		                       .quantidade(segundaEntradaEstoqueDTO.quantidade)
+		                       .produtoId(segundaEntradaDTO.produtoId)
+		                       .quantidade(segundaEntradaDTO.quantidade)
 		                       .caracteristicas(cvSegundaEntrada)
 		                       .build();
 

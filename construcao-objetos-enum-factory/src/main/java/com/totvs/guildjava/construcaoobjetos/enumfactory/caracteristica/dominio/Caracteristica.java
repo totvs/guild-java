@@ -26,7 +26,7 @@ public class Caracteristica {
 		return nome;
 	}
 
-	public CaracteristicaValorTipo getTipoValor() {
+	protected CaracteristicaValorTipo getTipoValor() {
 		return tipoValor;
 	}
 
