@@ -53,7 +53,7 @@ public enum CaracteristicaValorTipo {
 
 	};
 
-	public abstract CaracteristicaValor<?> createInstance(String caracteristicaId, String valor);
+	abstract CaracteristicaValor<?> createInstance(String caracteristicaId, String valor);
 }
 ```
 
