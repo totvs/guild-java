@@ -8,7 +8,7 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.totvs.guildjava</groupId>
+	<groupId>com.totvs.guildjava.construcaoobjetos</groupId>
 	<artifactId>construcao-objetos-enum-factory</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>construcao-objetos-enum-factory</name>
